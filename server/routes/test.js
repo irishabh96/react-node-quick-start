@@ -5,9 +5,7 @@ const Users = require('../../models/user');
 const app = express();
 
 app.post('/', (req, res) => {
-	console.log(req.body);
-	Users.create({ email: 'small' }, function(err, small) {
-		// saved!
+	Users.create({ email: 'small@yahoo.com' }, function(err, small) {
 		console.log(small);
 	});
 });

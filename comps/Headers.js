@@ -9,7 +9,6 @@ var payload = {
 	b: 2
 };
 
-// data.append('json', JSON.stringify(payload));
 fetch('http://localhost:3000/test', {
 	method: 'POST',
 	headers: {
@@ -27,6 +26,9 @@ const Header = () => (
 		</Link>
 		<Link href="/about">
 			<a style={linkStyle}>About</a>
+		</Link>
+		<Link href="/example">
+			<a style={linkStyle}>Example</a>
 		</Link>
 	</div>
 );
