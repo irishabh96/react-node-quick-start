@@ -5,7 +5,7 @@ const linkStyle = {
 };
 
 var payload = {
-	a: 1,
+	email: "test@rishabh.com",
 	b: 2
 };
 
@@ -17,7 +17,7 @@ fetch('http://localhost:3000/test', {
 	body: JSON.stringify(payload)
 })
 	.then((response) => response.json())
-	.then((data) => console.log(data));
+	// .then((data) => console.log(data));
 
 const Header = () => (
 	<div>

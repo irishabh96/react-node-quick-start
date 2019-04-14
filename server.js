@@ -22,23 +22,9 @@ app
 		server.use(bodyParser.urlencoded({ extended: false }));
 		server.use(bodyParser.json());
 
-		/**
-		 * ap
-		 */
-		// server.post('/test', (req, res) => {
-		// 	res.json(req.body);
-		// });
+		
 		server.use('/test', test);
 
-		/**
-		* query param's to actual route
-		*/
-
-		server.get('/example/:id', (req, res) => {
-			const actualPage = '/post';
-			const queryParams = { title: req.params.id };
-			app.render(req, res, actualPage, queryParams);
-		});
 
 		server.get('*', (req, res) => {
 			return handle(req, res);
